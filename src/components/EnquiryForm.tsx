@@ -18,10 +18,13 @@ export const EnquiryForm: React.FC<{ compact?: boolean }> = ({ compact = false }
   const validate = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.fullName.trim()) {
+    const trimmedName = formData.fullName.trim();
+    if (!trimmedName) {
       newErrors.fullName = 'कृपया तुमचे पूर्ण नाव टाका.';
-    } else if (formData.fullName.trim().length < 3) {
+    } else if (trimmedName.length < 3) {
       newErrors.fullName = 'नाव किमान ३ अक्षरांचे असावे.';
+    } else if (trimmedName.length > 80) {
+      newErrors.fullName = 'नाव कमाल ८० अक्षरांपर्यंत असावे.';
     }
 
     const phoneClean = formData.mobileNumber.replace(/\D/g, '');
@@ -33,6 +36,10 @@ export const EnquiryForm: React.FC<{ compact?: boolean }> = ({ compact = false }
 
     if (!formData.courseInterest) {
       newErrors.courseInterest = 'कृपया इच्छित कोर्स निवडा.';
+    }
+
+    if (formData.message && formData.message.length > 500) {
+      newErrors.message = 'संदेश कमाल ५०० अक्षरांपर्यंत मर्यादित असावा.';
     }
 
     setErrors(newErrors);
@@ -117,6 +124,7 @@ export const EnquiryForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             <input
               id="fullName"
               type="text"
+              maxLength={80}
               value={formData.fullName}
               onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
               placeholder="उदा. राहुल प्रकाश गायकवाड"
@@ -204,11 +212,18 @@ export const EnquiryForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             <textarea
               id="message"
               rows={3}
+              maxLength={500}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="उदा. माझी उंची १६५ सेमी आहे, मला हॉस्टेलची गरज आहे..."
               className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-army-800 focus:ring-2 focus:ring-army-200"
             />
+            {errors.message && (
+              <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
+                <AlertCircle className="w-3.5 h-3.5" />
+                <span>{errors.message}</span>
+              </p>
+            )}
           </div>
 
           {/* Submit CTA */}
