@@ -36,7 +36,7 @@ export const AdmissionPage: React.FC = () => {
           <span>प्रवेश प्रक्रिया व चौकशी</span>
         </div>
         <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-army-950">
-          सह्याद्री करिअर अकॅडमी प्रवेश मार्गदर्शन
+          {academyConfig.marathiName} प्रवेश मार्गदर्शन
         </h1>
         <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
           सोप्या ४ टप्प्यांत प्रवेश प्रक्रिया पूर्ण करा आणि आजच तुमच्या वर्दीच्या प्रवासाला सुरुवात करा.

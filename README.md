@@ -1,4 +1,4 @@
-# Maharashtra Police & Army Bharti Career Academy Website (Frontend-Only Release)
+# स्वराज्य करिअर अकॅडमी — Swarajya Career Academy Website (Frontend-Only Release)
 
 A modern, responsive, high-trust frontend website designed specifically for Maharashtra Police Bharti and Indian Army (Agniveer) pre-recruitment training academies.
 
