@@ -9,17 +9,17 @@ import {
 } from '../types';
 
 export const academyConfig: AcademyConfig = {
-  name: 'Swarajya Career Academy',
-  marathiName: 'स्वराज्य करिअर अकॅडमी',
+  name: 'Swarajya Career Academy, Aravade',
+  marathiName: 'स्वराज्य करिअर अकॅडमी, आरवडे',
   tagline: 'Maharashtra Police & Army Bharti Training Institute',
   marathiTagline: 'महाराष्ट्र पोलीस व सैन्य भरती पूर्व शारीरिक आणि लेखी परीक्षा परिपूर्ण केंद्र',
   logoText: 'स्वराज्य',
-  phone: '+919876543210',
-  whatsappNumber: '919876543210',
+  phone: '+919922456028',
+  whatsappNumber: '919922456028',
   email: 'admission@swarajyacareeracademy.com',
-  address: 'शिवाजी नगर, मुख्य क्रीडा संकुलाजवळ, पुणे, महाराष्ट्र - ४११००५',
-  workingHours: 'सोमवार ते शनिवार: सकाळी ०६:०० ते रात्री ०८:०० | रविवार: सकाळी ०६:०० ते दुपारी १२:००',
-  mapUrl: 'https://maps.google.com/?q=Shivaji+Nagar+Pune',
+  address: 'मांजर्डे रोड, आरवडे, तालुका - तासगाव, जिल्हा - सांगली, महाराष्ट्र',
+  workingHours: 'सोमवार ते शनिवार: सकाळी ०५:३० ते रात्री ०८:०० | रविवार: सकाळी ०६:०० ते दुपारी १२:००',
+  mapUrl: 'https://maps.google.com/?q=Aravade+Tasgaon+Sangli',
   mapEmbedPlaceholder: true,
   primaryLanguage: 'mr',
   announcement: {
