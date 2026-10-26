@@ -24,7 +24,7 @@ export const academyConfig: AcademyConfig = {
   primaryLanguage: 'mr',
   announcement: {
     enabled: true,
-    text: '🚨 नवीन पोलीस भरती व अग्निवीर विशेष बॅच प्रवेश सुरू! मर्यादित जागा उपलब्ध.',
+    text: 'नवीन पोलीस भरती व अग्निवीर विशेष बॅच प्रवेश सुरू! मर्यादित जागा उपलब्ध.',
     link: '/admission',
   },
 };

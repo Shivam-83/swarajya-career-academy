@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Phone, Mail, MapPin, Clock, MessageSquare, ChevronRight, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ChevronRight, AlertCircle } from 'lucide-react';
 import { academyConfig } from '../data/academyData';
+import { Logo } from './Logo';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const Footer: React.FC = () => {
   return (
@@ -11,19 +13,9 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Identity */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gold-500 text-army-950 flex items-center justify-center font-bold text-lg shadow">
-                <Shield className="w-6 h-6 fill-current text-army-900" />
-              </div>
-              <div>
-                <span className="font-heading font-bold text-lg text-white block">
-                  {academyConfig.marathiName}
-                </span>
-                <span className="text-xs text-gold-400 font-medium">
-                  {academyConfig.name}
-                </span>
-              </div>
-            </div>
+            <Link to="/" className="inline-block" aria-label={`${academyConfig.marathiName} मुख्यपृष्ठ`}>
+              <Logo size="sm" variant="light" />
+            </Link>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
               {academyConfig.marathiTagline}. शारीरिक चाचणी (Ground) आणि लेखी परीक्षेची परिपूर्ण शास्त्रोक्त पूर्वतयारी.
@@ -139,7 +131,7 @@ export const Footer: React.FC = () => {
               </div>
               {academyConfig.whatsappNumber && (
                 <div className="flex items-center gap-2.5">
-                  <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-400 shrink-0" />
                   <a
                     href={`https://wa.me/${academyConfig.whatsappNumber}`}
                     target="_blank"

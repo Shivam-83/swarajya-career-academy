@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, CheckCircle2, ShieldCheck, MapPin, ArrowRight } from 'lucide-react';
-import { facilitiesData, academyConfig } from '../data/academyData';
+import { CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
+import { facilitiesData } from '../data/academyData';
 
 export const FacilitiesPage: React.FC = () => {
   return (

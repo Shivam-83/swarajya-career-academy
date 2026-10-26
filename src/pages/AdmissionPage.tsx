@@ -1,7 +1,8 @@
 import React from 'react';
-import { Award, CheckCircle2, FileText, Phone, MessageSquare, ShieldCheck, HelpCircle } from 'lucide-react';
+import { CheckCircle2, FileText, Phone } from 'lucide-react';
 import { EnquiryForm } from '../components/EnquiryForm';
 import { academyConfig } from '../data/academyData';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 
 export const AdmissionPage: React.FC = () => {
   const steps = [
@@ -121,8 +122,9 @@ export const AdmissionPage: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold shadow-md transition-colors"
+                    aria-label="WhatsApp वर चॅट करा"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     <span>WhatsApp वर चॅट करा</span>
                   </a>
                 )}

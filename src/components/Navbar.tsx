@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, MessageSquare, Shield, Award } from 'lucide-react';
+import { Menu, X, Phone, Award, GraduationCap } from 'lucide-react';
 import { academyConfig } from '../data/academyData';
+import { Logo } from './Logo';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const navLinks = [
   { name: 'मुख्यपृष्ठ', path: '/' },
@@ -40,24 +42,13 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo & Academy Name */}
-          <Link to="/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg p-1">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-army-950 font-extrabold text-xl shadow-md border border-gold-300 transform group-hover:scale-105 transition-transform">
-              <Shield className="w-7 h-7 text-army-900 fill-current" />
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="font-heading font-bold text-lg sm:text-xl text-white tracking-wide">
-                  {academyConfig.marathiName}
-                </span>
-                <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gold-500/20 text-gold-300 border border-gold-500/30">
-                  Govt. Pattern
-                </span>
-              </div>
-              <span className="text-[11px] sm:text-xs text-gold-400 font-medium tracking-wider">
-                {academyConfig.name}
-              </span>
-            </div>
+          {/* Authentic Academy Logo & Name */}
+          <Link
+            to="/"
+            className="flex items-center group focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg p-1"
+            aria-label={`${academyConfig.marathiName} मुख्यपृष्ठ`}
+          >
+            <Logo size="md" variant="light" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -147,9 +138,10 @@ export const Navbar: React.FC = () => {
             <div className="mt-6 pt-5 border-t border-army-800/80 flex flex-col gap-3">
               <Link
                 to="/admission"
-                className="w-full text-center py-3 px-4 rounded-xl font-bold bg-gradient-to-r from-gold-500 to-gold-600 text-army-950 shadow-md text-sm"
+                className="w-full text-center py-3 px-4 rounded-xl font-bold bg-gradient-to-r from-gold-500 to-gold-600 text-army-950 shadow-md text-sm flex items-center justify-center gap-2"
               >
-                🎓 आताच मोफत प्रवेश चौकशी करा
+                <GraduationCap className="w-4 h-4 text-army-950" />
+                <span>आताच मोफत प्रवेश चौकशी करा</span>
               </Link>
               
               <div className="grid grid-cols-2 gap-2 pt-1">
@@ -157,6 +149,7 @@ export const Navbar: React.FC = () => {
                   <a
                     href={`tel:${academyConfig.phone}`}
                     className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-army-800 text-slate-200 text-xs font-medium border border-army-700 hover:border-gold-500/40"
+                    aria-label={`अकॅडमीला कॉल करा: ${academyConfig.phone}`}
                   >
                     <Phone className="w-4 h-4 text-gold-400" />
                     <span>कॉल करा</span>
@@ -168,8 +161,9 @@ export const Navbar: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-emerald-900/60 text-emerald-300 text-xs font-medium border border-emerald-700/60 hover:bg-emerald-800/60"
+                    aria-label="WhatsApp वर संपर्क करा"
                   >
-                    <MessageSquare className="w-4 h-4 text-emerald-400" />
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                     <span>WhatsApp</span>
                   </a>
                 )}

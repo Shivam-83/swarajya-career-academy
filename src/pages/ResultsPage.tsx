@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, ShieldCheck, Quote, AlertCircle, Filter } from 'lucide-react';
+import { ShieldCheck, Quote, AlertCircle } from 'lucide-react';
 import { resultStoriesData } from '../data/academyData';
 
 export const ResultsPage: React.FC = () => {

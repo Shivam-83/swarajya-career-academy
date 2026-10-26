@@ -1,7 +1,8 @@
 import React from 'react';
-import { Phone, MessageSquare, Award } from 'lucide-react';
+import { Phone, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { academyConfig } from '../data/academyData';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const MobileStickyBar: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const MobileStickyBar: React.FC = () => {
             className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-sm active:scale-95 transition-all"
             aria-label="WhatsApp वर मेसेज करा"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4" />
             <span>WhatsApp</span>
           </a>
         )}

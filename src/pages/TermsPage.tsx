@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCircle, FileCheck2 } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { academyConfig } from '../data/academyData';
 
 export const TermsPage: React.FC = () => {

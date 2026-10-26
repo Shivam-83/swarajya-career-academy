@@ -9,9 +9,12 @@ import {
   Phone,
   ArrowRight,
   Flame,
-  Calendar,
   Building2,
   Users,
+  Trophy,
+  Home,
+  ClipboardCheck,
+  ShieldCheck,
 } from 'lucide-react';
 import {
   academyConfig,
@@ -132,8 +135,11 @@ export const HomePage: React.FC = () => {
               className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-subtle hover:shadow-card hover:border-gold-500/40 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-army-50 border border-army-100 flex items-center justify-center text-army-800 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-gold-600" />
+                <div className="w-12 h-12 rounded-xl bg-army-50 border border-army-100 flex items-center justify-center text-army-800 mb-4" aria-hidden="true">
+                  {index === 0 && <ShieldCheck className="w-6 h-6 text-gold-600" />}
+                  {index === 1 && <Trophy className="w-6 h-6 text-gold-600" />}
+                  {index === 2 && <ClipboardCheck className="w-6 h-6 text-gold-600" />}
+                  {index === 3 && <Home className="w-6 h-6 text-gold-600" />}
                 </div>
                 <h3 className="font-heading font-bold text-base text-army-950 mb-2">
                   {item.title}
@@ -482,8 +488,12 @@ export const HomePage: React.FC = () => {
 
                 <div className="mt-6 pt-4 border-t border-army-800 text-[11px] text-slate-400 flex items-center justify-between">
                   <span>अंतिम तारीख: {notice.deadline}</span>
-                  <Link to="/bharti-updates" className="text-gold-400 hover:underline">
-                    तपशील →
+                  <Link
+                    to="/bharti-updates"
+                    className="text-gold-400 hover:text-gold-300 font-semibold inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>तपशील</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 import { academyConfig } from '../data/academyData';
 import { EnquiryForm } from '../components/EnquiryForm';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 
 export const ContactPage: React.FC = () => {
   return (
@@ -75,7 +76,7 @@ export const ContactPage: React.FC = () => {
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-card flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-4 border border-emerald-100">
-                <MessageSquare className="w-6 h-6 text-emerald-600" />
+                <WhatsAppIcon className="w-6 h-6 text-emerald-600" />
               </div>
               <h3 className="font-heading font-bold text-base text-army-950 mb-1">
                 WhatsApp हेल्पलाइन
@@ -86,6 +87,7 @@ export const ContactPage: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-semibold shadow hover:bg-emerald-500 transition-colors"
+                aria-label="WhatsApp चॅट सुरू करा"
               >
                 <span>चॅट सुरू करा</span>
                 <ExternalLink className="w-3.5 h-3.5" />

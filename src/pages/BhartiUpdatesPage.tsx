@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ExternalLink, Calendar, AlertCircle, Clock, ShieldAlert } from 'lucide-react';
+import { Search, ExternalLink, Calendar, Clock, ShieldAlert } from 'lucide-react';
 import { recruitmentNoticesData } from '../data/academyData';
 
 export const BhartiUpdatesPage: React.FC = () => {

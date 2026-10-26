@@ -7,10 +7,6 @@ import {
   CheckCircle2,
   Award,
   BookOpen,
-  Dumbbell,
-  FileText,
-  AlertCircle,
-  HelpCircle,
 } from 'lucide-react';
 import { coursesData } from '../data/academyData';
 import { FaqAccordion } from '../components/FaqAccordion';

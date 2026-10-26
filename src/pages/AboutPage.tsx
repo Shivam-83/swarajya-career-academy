@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Target, Compass, Award, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Target, Compass } from 'lucide-react';
 import { academyConfig, instructorsData } from '../data/academyData';
 
 export const AboutPage: React.FC = () => {

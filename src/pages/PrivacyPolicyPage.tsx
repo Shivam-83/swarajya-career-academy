@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, EyeOff } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { academyConfig } from '../data/academyData';
 
 export const PrivacyPolicyPage: React.FC = () => {

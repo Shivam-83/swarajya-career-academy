@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Search, Filter, BookOpen, AlertCircle } from 'lucide-react';
+import { Search, Filter, AlertCircle } from 'lucide-react';
 import { coursesData } from '../data/academyData';
-import { CourseCategory, TrainingType } from '../types';
 import { CourseCard } from '../components/CourseCard';
 
 export const CoursesPage: React.FC = () => {
